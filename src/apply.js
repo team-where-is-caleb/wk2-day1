@@ -5,4 +5,5 @@ const form = document.getElementById('party-app');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
+    function getApplicant(formData)
 });
