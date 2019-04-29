@@ -8,9 +8,100 @@
     <link rel="stylesheet" href="./src/main.css">
 </head>
 <body>
-    <h1>
-        Search party application
-    </h1>
+    <header>
+        <h1>
+            Search party application
+        </h1>
+    </header>
+    <main>
+        <form id="party-app">
+
+            <h2>A little about you.</h2>
+
+            <section>
+                <p>
+                    <label for="name">Full Name:</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="Please type your name" required>
+                </p>
+                <p>
+                     <label for="age">Age:</label>   
+                     <input type="number" id="age" required>
+                </p>
+            </section>
+
+            <section>
+                <fieldset>
+                    <legend>
+                        What are your applicable skills?
+                    </legend>
+
+                    <div>
+                        <input type="checkbox" value="tracking" name="app-skills" id="tracking">
+                        <label for="tracking">Tracking</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" value="vocals" name="app-skills" id="vocals">
+                        <label for="vocals">Loud Voice</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" value="first-aid" name="app-skills" id="first-aid">
+                        <label for="first-aid">First Aid</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" value="beast-speech" name="app-skills" id="beast-speech">
+                        <label for="beast-speech">Beast Speech</label>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section>
+                <fieldset>
+                    <legend>
+                        Have you found Caleb before?
+                    </legend>
+                    <input type="radio" id="yes" value="yes" name="found" required>
+                    <label>Yes</label>
+
+                    <input type="radio" id="no" value="no" name="found" required>
+                    <label>No</label>           
+                </fieldset>
+            </section>
+
+            <section>
+                <fieldset>
+                    <label for="role">Select search party role:</label>
+                    <select name="role" id="role" required>
+
+                        <option value="" hidden disabled selected>Select a role</option>
+                        <option value="helicopter">Helicopter Pilot</option>
+                        <option value="beast-handler">Beast Handler</option>
+                        <option value="caterer">Caterer</option>
+                        <option value="binocular">Binocular Operator</option>
+
+                    </select>
+                </fieldset>
+            </section>
+
+            <section>
+                <fieldset>
+
+                    <label for="motivation">Why do you want to find Caleb?</label>
+                    <br />
+                    <textarea name="motivation" id="motivation"></textarea>
+
+                </fieldset>
+            </section>
+                
+
+
+
+        </form>
+    </main>
+        
+    
     
     
 </body>
