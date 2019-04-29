@@ -1,3 +1,4 @@
+import getApplicant from '../src/getApplicant.js';
 // Reference form node
 const form = document.getElementById('party-app');
 
@@ -5,5 +6,7 @@ const form = document.getElementById('party-app');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    function getApplicant(formData)
+    const formData = new FormData(form);
+    const applicant = getApplicant(formData);
+    console.log(applicant);
 });
