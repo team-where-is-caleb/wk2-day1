@@ -1,7 +1,7 @@
 const test = QUnit.test;
-
+import applicantApi from '../src/applicant-api.js';
 //verify code below before implementing
-//QUnit.module('applicant api');
+QUnit.module('applicant api');
 
 test('round-trip applicant test', (assert) => {
 //arrange

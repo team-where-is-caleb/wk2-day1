@@ -1,1 +1,2 @@
-import getApplicant from '../src/getApplicant.js';
+import './make-applicant.test.js';
+import './applicant-api.test.js';
