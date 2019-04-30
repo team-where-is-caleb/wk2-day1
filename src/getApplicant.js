@@ -1,8 +1,9 @@
 function getApplicant(formData) {
+    const age = parseInt(formData.get('age'));
     //Make object literal, literally making an object
     const applicant = {
         name: formData.get('full-name'),
-        age: formData.get('age'),
+        age: age,
         appSkills: formData.getAll('app-skills'),
         found: formData.get('found'),
         role: formData.get('role'),
