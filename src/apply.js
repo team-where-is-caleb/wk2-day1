@@ -1,4 +1,7 @@
 import getApplicant from '../src/getApplicant.js';
+import makeApplicant from './applicant-api.js';
+import applicantApi from './applicant-api.js';
+
 // Reference form node Hi
 const form = document.getElementById('party-app');
 
@@ -8,5 +11,5 @@ form.addEventListener('submit', (event) => {
 
     const formData = new FormData(form);
     const applicant = getApplicant(formData);
-    console.log(applicant);
+    applicantApi.save(applicant);
 });

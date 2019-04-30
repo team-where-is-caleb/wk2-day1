@@ -1,9 +1,9 @@
 const applicantApi = {
-    saveFunction(applicant) {
+    save(applicant) {
         const json = JSON.stringify(applicant);
         localStorage.setItem('applicant', json);
     },
-    getFunction() {
+    get() {
         const json = localStorage.getItem('applicant');
         const applicant = JSON.parse(json);
         return applicant;
