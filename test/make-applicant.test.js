@@ -1,4 +1,4 @@
-import getApplicant from '../src/getApplicant.js'
+import getApplicant from '../src/getApplicant.js';
 const test = QUnit.test;
 test('time to test a function', function(assert) {
     //Arrange
