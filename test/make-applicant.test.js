@@ -4,7 +4,7 @@ test('time to test a function', function(assert) {
     //Arrange
     const expected = {
         name: 'Dirt',
-        age: '36',
+        age: 36,
         appSkills: ['tracking', 'vocals'],
         found: 'yes',
         role: 'helicopter',
