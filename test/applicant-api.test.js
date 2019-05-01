@@ -15,7 +15,6 @@ test('round-trip applicant', (assert) => {
     const result = applicantApi.get();
     //assert
     assert.deepEqual(result, applicant);  
-    console.log(applicant)  
 
 });
 

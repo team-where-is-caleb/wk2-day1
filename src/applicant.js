@@ -8,7 +8,6 @@ const role = document.getElementById('role');
 const motivation = document.getElementById('motivation');
 
 const applicant = applicantApi.get();
-console.log(applicant);
 if(!applicant) {
     window.location = './';
 }

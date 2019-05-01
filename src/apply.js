@@ -1,7 +1,7 @@
 import getApplicant from '../src/getApplicant.js';
 import applicantApi from './applicant-api.js';
 
-// Reference form node Hi
+// Reference form node
 const form = document.getElementById('party-app');
 
 //main event listener

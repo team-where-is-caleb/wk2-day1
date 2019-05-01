@@ -1,5 +1,6 @@
 import getApplicant from '../src/getApplicant.js';
 const test = QUnit.test;
+
 test('time to test a function', function(assert) {
     //Arrange
     const expected = {
@@ -20,6 +21,7 @@ test('time to test a function', function(assert) {
     formData.set('found', 'yes');
     formData.set('role', expected.role);
     formData.set('motivation', expected.motivation);
+    
     //Act 
     const applicant = getApplicant(formData);
 

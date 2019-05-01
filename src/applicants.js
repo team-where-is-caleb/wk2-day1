@@ -20,6 +20,7 @@ for(let i = 0; i < applicants.length; i++) {
     if(applicant.appSkills) {
         appSkillsList = applicant.appSkills.join(', ');
     }
+    
     appSkillsCell.textContent = appSkillsList;
     tr.appendChild(appSkillsCell);
 
