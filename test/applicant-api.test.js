@@ -3,13 +3,25 @@ import applicantApi from '../src/applicant-api.js';
 
 QUnit.module('applicant api');
 
-test('round-trip applicant test', (assert) => {
+applicantApi.storage = sessionStorage;
+const testStorage = sessionStorage;
 
-    const applicant = { name: 'tester' };
-
+test('round-trip applicant', (assert) => {
+    testStorage.removeItem('applicants');
+    //arrange
+    const applicant = { name: 'tester'};
+    //act
     applicantApi.save(applicant);
     const result = applicantApi.get();
+    //assert
+    assert.deepEqual(result, applicant);    
 
-    assert.deepEqual(result, applicant);
+});
+
+test('no applicants in local storage returns empty array', (assert) => {
+    testStorage.removeItem('applicants');
+    const expected = [];
+    const applicants = applicantApi.getAll();
+    assert.deepEqual(applicants, expected);
 
 });
