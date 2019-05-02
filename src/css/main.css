@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+body {
+    background-color: #8C99A8;
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 4em;
+    color: #dea422;
+}
+
+img {
+    height: 500px;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #dea422;
+    font-size: 2em;
+}
+
+a:visited {
+    color: rgb(206, 206, 206);
+}
