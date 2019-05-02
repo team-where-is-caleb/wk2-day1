@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+body {
+   text-align: center;
+}
+
 table {
-    width: 100%;
+   width: 100%;
     max-width: 750px;
     margin: auto;
     border-collapse: collapse;
@@ -7,9 +13,11 @@ table {
  }
  
  thead {
+   font-family: 'Anton', sans-serif;
+    font-size: 2em;
     font-weight: bolder;
-    color: white;
-    background: #EB4D5C;
+    color: #fbfafa;
+    background: #dea422;
  }
  
  tbody tr:nth-child(even) {
