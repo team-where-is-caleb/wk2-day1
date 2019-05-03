@@ -12,7 +12,7 @@ const id = searchParams.get('name');
 
 const applicant = applicantApi.get(id);
 if(!applicant) {
-     window.location = './';
+    window.location = './';
 }
 
 name.textContent = applicant.name;
