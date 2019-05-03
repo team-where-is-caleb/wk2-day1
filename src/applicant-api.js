@@ -6,7 +6,6 @@ const applicantApi = {
         applicants.push(applicant);
         const json = JSON.stringify(applicants);
         applicantApi.storage.setItem('applicants', json);
-        console.log(applicants, 'API');
     },
     get(name) {
         //const json = localStorage.getItem('applicant');
@@ -24,10 +23,8 @@ const applicantApi = {
         if(!applicants) {
             applicants = [];
         }
-
         return applicants;
     }
-
 };
 
 export default applicantApi;

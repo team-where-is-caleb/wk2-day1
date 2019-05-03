@@ -1,4 +1,3 @@
-
 function makeApplicantRow(applicant) {
     const tr = document.createElement('tr');
 
@@ -28,9 +27,7 @@ function makeNameCell(name) {
     link.textContent = name;
     nameCell.appendChild(link);
     
-    console.log(link)
     return nameCell;
-
 }
 
 function makeAppSkillsCell(appSkills) {
