@@ -7,7 +7,10 @@ const found = document.getElementById('found');
 const role = document.getElementById('role');
 const motivation = document.getElementById('motivation');
 
-const applicant = applicantApi.get();
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get('name');
+
+const applicant = applicantApi.get(id);
 if(!applicant) {
     window.location = './';
 }
@@ -18,6 +21,7 @@ appSkills.textContent = applicant.appSkills;
 if(applicant.appSkills) {
     appSkills.textContent = applicant.appSkills.join(', ');
 }
+
 found.textContent = applicant.found;
 role.textContent = applicant.role;
 motivation.textContent = applicant.motivation;

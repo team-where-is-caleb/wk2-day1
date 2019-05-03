@@ -9,12 +9,14 @@ const testStorage = sessionStorage;
 test('round-trip applicant', (assert) => {
     testStorage.removeItem('applicants');
     //arrange
-    const applicant = { name: 'tester' };
+    const applicant1 = { name: 'tester1' };
+    const applicant2 = { name: 'tester2' };
     //act
-    applicantApi.save(applicant);
-    const result = applicantApi.get();
+    applicantApi.save(applicant1);
+    applicantApi.save(applicant2);
+    const result = applicantApi.get(applicant2.name);
     //assert
-    assert.deepEqual(result, applicant);  
+    assert.deepEqual(result, applicant2);  
 
 });
 

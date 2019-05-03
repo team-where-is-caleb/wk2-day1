@@ -6,12 +6,16 @@ const applicantApi = {
         applicants.push(applicant);
         const json = JSON.stringify(applicants);
         applicantApi.storage.setItem('applicants', json);
-        console.log(applicants, 'API');
     },
-    get() {
+    get(name) {
         //const json = localStorage.getItem('applicant');
         const applicants = applicantApi.getAll();
-        return applicants[0];
+        for(let i = 0; i < applicants.length; i++) {
+            const applicant = applicants[i];
+            if(applicant.name === name) {
+                return applicant;
+            }
+        } 
     },
     getAll() {
         const json = applicantApi.storage.getItem('applicants');
@@ -19,10 +23,8 @@ const applicantApi = {
         if(!applicants) {
             applicants = [];
         }
-
         return applicants;
     }
-
 };
 
 export default applicantApi;
