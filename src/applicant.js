@@ -7,9 +7,13 @@ const found = document.getElementById('found');
 const role = document.getElementById('role');
 const motivation = document.getElementById('motivation');
 
-const applicant = applicantApi.get();
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get('name');
+
+
+const applicant = applicantApi.get(id);
 if(!applicant) {
-    window.location = './';
+     window.location = './';
 }
 
 name.textContent = applicant.name;
